@@ -6,6 +6,10 @@ const server = http.createServer((req, res)=>{
         res.write("Home page");
         res.end();
     }
+    else if(req.url === '/about'){
+        res.write("Im about page");
+        res.end();
+    }
     else if(req.method === 'GET' && req.url === '/contact'){
         res.write(JSON.stringify([1,2,3]));
         res.end();
